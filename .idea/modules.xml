@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/--master.iml" filepath="$PROJECT_DIR$/--master.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/jump.iml" filepath="$PROJECT_DIR$/jump.iml" />
+      <module fileurl="file://C:\Users\gdei\Downloads\--master\app\app.iml" filepath="C:\Users\gdei\Downloads\--master\app\app.iml" />
+      <module fileurl="file://C:\Users\gdei\Downloads\--master\jump.iml" filepath="C:\Users\gdei\Downloads\--master\jump.iml" />
     </modules>
   </component>
 </project>
