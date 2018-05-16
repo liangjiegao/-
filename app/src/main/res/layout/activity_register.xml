@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:id="@+id/main_register"
+    >
+    <LinearLayout
+        android:id="@+id/rg_ll_un"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/usernameText"
+            android:textSize="14dp"
+            />
+        <EditText
+            android:id="@+id/register_username"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/rg_ll_pw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/rg_ll_un"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/password"
+            android:textSize="14dp"
+            />
+        <EditText
+            android:id="@+id/register_password"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <Button
+        android:id="@+id/register_ok"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:text="@string/register"
+        android:layout_below="@+id/rg_ll_pw"
+        android:layout_marginTop="30dp"
+        />
+</RelativeLayout>

@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">跳蚤市场</string>
+    <string name="usernameText">用户名：</string>
+    <string name="password">密\t\t码：</string>
+    <string name="login_text">登录</string>
+    <string name="register_text">注册</string>
+    <string name="weChatLogin">微信登录</string>
+    <string name="forget_password">忘记密码</string>
+    <string name="register">注册</string>
+    <string name="goods_title">标题\t请输入宝贝的标题</string>
+    <string name="tempText">那是我每次都啦什么的科拉山脉打开拉萨吗对面卡萨丁没空啦什么的立刻马上打款了吗是的马克思劳动mask打了马赛克的吗没打开拉萨的穆斯林打开马上到立刻马上的的密码是</string>
+</resources>

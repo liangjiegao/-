@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="divide_color">#d1d1d1</color>
+    <color name="price_color">#ef3b3b</color>
+    <color name="view_head_color">#dafffc</color>
+    <color name="view_footer_color">#faf7f7</color>
+    <color name="body_color">#f4fcff</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000</color>
+</resources>
