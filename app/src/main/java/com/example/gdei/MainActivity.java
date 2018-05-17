@@ -59,10 +59,10 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationB
     //初始化界面
     public void initView(){
         bnb = findViewById(R.id.home_bnb);
-        bnb.addItem(new BottomNavigationItem(R.mipmap.ic_launcher,"跳蚤市场"))
-            .addItem(new BottomNavigationItem(R.mipmap.ic_launcher,"发布"))
-            .addItem(new BottomNavigationItem(R.mipmap.ic_launcher,"消息"))
-            .addItem(new BottomNavigationItem(R.mipmap.ic_launcher,"我的"))
+        bnb.addItem(new BottomNavigationItem(R.mipmap.market2,"跳蚤市场").setInactiveIconResource(R.mipmap.market1))
+            .addItem(new BottomNavigationItem(R.mipmap.sale2,"sale").setInactiveIconResource(R.mipmap.sale1))
+            .addItem(new BottomNavigationItem(R.mipmap.news2,"news").setInactiveIconResource(R.mipmap.news1))
+            .addItem(new BottomNavigationItem(R.mipmap.my2,"我的").setInactiveIconResource(R.mipmap.my1))
             .setFirstSelectedPosition(0)
             .initialise();
         bnb.setTabSelectedListener(this);

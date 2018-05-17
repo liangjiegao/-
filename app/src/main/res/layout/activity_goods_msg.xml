@@ -18,7 +18,7 @@
             android:layout_width="25dp"
             android:layout_height="25dp"
             android:scaleType="fitXY"
-            android:src="@drawable/left"
+            android:src="@mipmap/left"
             android:background="@null"
             android:layout_marginStart="15dp"
             />
@@ -148,10 +148,11 @@
 
         <ImageButton
             android:id="@+id/goods_msg_ib_praise"
-            android:layout_width="15dp"
-            android:layout_height="15dp"
-            android:background="@drawable/left"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:background="@mipmap/love"
             android:layout_marginStart="20dp"
+            android:layout_marginTop="3dp"
             />
         <TextView
             android:id="@+id/goods_msg_tv_praise"
@@ -165,11 +166,12 @@
             />
         <ImageButton
             android:id="@+id/goods_msg_ib_message"
-            android:layout_width="15dp"
-            android:layout_height="15dp"
-            android:background="@drawable/left"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:background="@mipmap/note"
             android:layout_toEndOf="@+id/goods_msg_tv_praise"
             android:layout_marginStart="20dp"
+            android:layout_marginTop="3dp"
             />
         <TextView
             android:id="@+id/goods_msg_tv_message"
@@ -183,11 +185,12 @@
             />
         <ImageButton
             android:id="@+id/goods_msg_ib_collection"
-            android:layout_width="15dp"
-            android:layout_height="15dp"
-            android:background="@drawable/left"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:background="@mipmap/coll"
             android:layout_toEndOf="@+id/goods_msg_tv_message"
             android:layout_marginStart="20dp"
+            android:layout_marginTop="1dp"
             />
         <TextView
             android:id="@+id/goods_msg_tv_collection"

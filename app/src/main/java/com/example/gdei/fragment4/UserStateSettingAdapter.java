@@ -21,8 +21,8 @@ import java.util.List;
 
 public class UserStateSettingAdapter extends RecyclerView.Adapter<UserStateSettingAdapter.StateHolder> {
 
-    int[] stateIcons = {R.mipmap.ic_launcher_round, R.mipmap.ic_launcher_round, R.mipmap.ic_launcher_round,
-                          R.mipmap.ic_launcher_round};
+    int[] stateIcons = {R.mipmap.sale02, R.mipmap.sold02, R.mipmap.collection02,
+                          R.mipmap.buy02};
     String[] stateTexts;
     private Context context;
     private List<Integer> list;

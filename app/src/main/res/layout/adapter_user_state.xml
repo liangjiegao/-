@@ -16,8 +16,8 @@
         >
     <ImageView
         android:id="@+id/state_icon"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
         android:layout_marginStart="18dp"
         />
     <TextView
@@ -38,7 +38,7 @@
     <ImageView
         android:layout_width="15dp"
         android:layout_height="15dp"
-        android:src="@drawable/inter"
+        android:src="@mipmap/right"
         android:scaleType="fitXY"
         />
     </LinearLayout>

@@ -132,7 +132,7 @@
                                 android:layout_weight="1"
                                 android:scaleType="fitXY"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/inter"
+                                android:src="@mipmap/right"
                                 />
                         </LinearLayout>
                     </LinearLayout>
@@ -154,7 +154,7 @@
             android:id="@+id/user_msg_back"
             android:layout_width="25dp"
             android:layout_height="25dp"
-            android:src="@drawable/left"
+            android:src="@mipmap/left"
             android:background="@null"
             android:scaleType="fitXY"
             android:layout_marginStart="10dp"
