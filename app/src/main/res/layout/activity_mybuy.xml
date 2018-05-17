@@ -1,46 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:background="@color/body_color"
+    android:orientation="vertical"
     >
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:background="@color/view_head_color"
+        >
+        <ImageButton
+            android:id="@+id/mybuy_back"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/left"
+            android:background="@null"
+            android:scaleType="fitXY"
+            android:layout_marginStart="15dp"
+            />
+        <TextView
+            android:id="@+id/mybuy_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="我买到的"
+            android:textSize="16dp"
+            android:textColor="@color/black"
+            android:layout_centerHorizontal="true"
+            />
+    </RelativeLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         >
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:gravity="center_vertical"
-            android:background="@color/view_head_color"
-            >
-            <ImageButton
-                android:id="@+id/mybuy_back"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:src="@drawable/left"
-                android:background="@null"
-                android:scaleType="fitXY"
-                android:layout_marginStart="15dp"
-                />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="我买到的"
-                android:textSize="16dp"
-                android:textColor="@color/black"
-                android:layout_centerHorizontal="true"
-                />
-        </RelativeLayout>
+
         <android.support.v7.widget.RecyclerView
             android:id="@+id/mybuy_goodsList"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:background="@color/white"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
             >
 
         </android.support.v7.widget.RecyclerView>
-    </LinearLayout>
-</ScrollView>
+    </ScrollView>
+</LinearLayout>

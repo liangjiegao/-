@@ -18,6 +18,7 @@ import com.example.gdei.fragment1.MarketFragment;
 import com.example.gdei.fragment2.IntroducedFragment;
 import com.example.gdei.fragment3.NewsFragment;
 import com.example.gdei.fragment4.UserMsgFragment;
+import com.example.gdei.util.BufferedReaderToString;
 import com.example.gdei.util.GetPostUtil;
 
 import org.json.JSONArray;
@@ -108,7 +109,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationB
         new Thread(){
             @Override
                public void run() {
-                GetPostUtil gpu = new GetPostUtil("http://192.168.42.203:8080/LoadUserMsg?userName=superL");
+                GetPostUtil gpu = new GetPostUtil("http://192.168.42.203:8080/LoadUserMsg?userName=superL&mode=0");
                 br = gpu.sendGet();
                 handler.sendEmptyMessage(0x00301);
             }
@@ -158,31 +159,35 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationB
         @Override
         public void handleMessage(Message msg) {
             if (msg.what == 0x00301){
-                String str = "";
-                StringBuffer result = new StringBuffer();
-                try {
-                    while ((str = br.readLine()) != null) {
-                        result.append(str);
-                    }
+                try{
+                    String result = BufferedReaderToString.brToString(br);
                     //System.out.println(result.toString());
                     JSONArray jsonArray = new JSONArray(result.toString());
                     JSONObject jsonObject1 = new JSONObject(jsonArray.getString(0));
                     MyContext.username = jsonObject1.optString("username","");
                     //System.out.println(jsonObject1.getString("username"));
                     MyContext.selfIntr= jsonObject1.optString("Intr","");
-                    System.out.println(MyContext.selfIntr);
                     MyContext.myAtten=jsonObject1.optInt("myAtten");
                     MyContext.attrnMe=jsonObject1.optInt("attenMe");
-                    MyContext.myBuy=jsonObject1.optInt("myBuy");
+                    MyContext.myBuyNum=jsonObject1.optInt("myBuy");
+                    MyContext.soldGoodsStore = jsonObject1.optInt("soldGoodsStore");
                     MyContext.saleGoodsStore=jsonObject1.optInt("saleGoodsStore");
+                    MyContext.collectionStore=jsonObject1.optInt("collection");
+                    MyContext.myBuyStore = jsonObject1.optInt("buyStore");
+
                     JSONObject jsonObject2 = new JSONObject(jsonArray.getString(1));
-                    MyContext.collection=jsonObject2.optInt("collection");
-                    System.out.println(MyContext.collection);
+                    MyContext.collectionNum=jsonObject2.optInt("collection");
+                    System.out.println(MyContext.collectionNum);
+
                     JSONObject jsonObject3 = new JSONObject(jsonArray.getString(2));
-                    MyContext.saleGoods=jsonObject3.optInt("saleNum");
+                    MyContext.saleGoodsNum=jsonObject3.optInt("saleNum");
 
                     JSONObject jsonObject4 = new JSONObject(jsonArray.getString(3));
-                    MyContext.soldGoods=jsonObject4.optInt("soldNum");
+                    MyContext.soldGoodsNum=jsonObject4.optInt("soldNum");
+
+                    JSONObject jsonObject5 = new JSONObject(jsonArray.getString(4));
+                    MyContext.myBuyNum=jsonObject5.optInt("buyNum");
+
                     br.close();
                     // return list;
                 } catch (Exception e) {
@@ -191,4 +196,6 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationB
             }
         }
     };
+
+
 }

@@ -95,15 +95,15 @@ public class UserMsgActivity extends Activity implements View.OnClickListener{
                     System.out.println(MyContext.selfIntr);
                     MyContext.myAtten=jsonObject1.optInt("myAtten");
                     MyContext.attrnMe=jsonObject1.optInt("attenMe");
-                    MyContext.myBuy=jsonObject1.optInt("myBuy");
+                    MyContext.myBuyNum=jsonObject1.optInt("myBuy");
                     MyContext.saleGoodsStore=jsonObject1.optInt("saleGoodsStore");
                     JSONObject jsonObject2 = new JSONObject(jsonArray.getString(1));
-                    MyContext.collection=jsonObject2.optInt("collection");
-                    System.out.println(MyContext.collection);
+                    MyContext.collectionNum=jsonObject2.optInt("collection");
+                    System.out.println(MyContext.collectionNum);
                     JSONObject jsonObject3 = new JSONObject(jsonArray.getString(2));
-                    MyContext.saleGoods=jsonObject3.optInt("saleNum");
+                    MyContext.saleGoodsNum=jsonObject3.optInt("saleNum");
                     JSONObject jsonObject4 = new JSONObject(jsonArray.getString(3));
-                    MyContext.soldGoods=jsonObject4.optInt("soldNum");
+                    MyContext.soldGoodsNum=jsonObject4.optInt("soldNum");
                     br.close();
                     setMsgInView();
                 } catch (Exception e) {

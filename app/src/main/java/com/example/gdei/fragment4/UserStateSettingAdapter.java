@@ -23,16 +23,15 @@ public class UserStateSettingAdapter extends RecyclerView.Adapter<UserStateSetti
 
     int[] stateIcons = {R.mipmap.ic_launcher_round, R.mipmap.ic_launcher_round, R.mipmap.ic_launcher_round,
                           R.mipmap.ic_launcher_round};
-    String[] stateTexts = {"我的发布", "我的卖出","我的收藏","我买到的"};
-
-
+    String[] stateTexts;
     private Context context;
     private List<Integer> list;
     private MyGoodsStateItemListener stateItemListener;
-    public UserStateSettingAdapter(Context context, List<Integer> list, MyGoodsStateItemListener listener){
+    public UserStateSettingAdapter(Context context, List<Integer> list,  String[] stateTexts,MyGoodsStateItemListener listener){
         this.list = list;
         this.context = context;
         this.stateItemListener = listener;
+        this.stateTexts = stateTexts;
     }
 
 
@@ -44,14 +43,14 @@ public class UserStateSettingAdapter extends RecyclerView.Adapter<UserStateSetti
     }
 
     @Override
-    public void onBindViewHolder(StateHolder holder, int position) {
+    public void onBindViewHolder(StateHolder holder, final int position) {
         holder.state_icon.setBackgroundResource(stateIcons[position]);
         holder.state_name.setText(stateTexts[position]);
         holder.state_num.setText(list.get(position)+"");
         holder.state_body.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                stateItemListener.onClick();
+                stateItemListener.onClick(position);
             }
         });
     }
@@ -75,6 +74,6 @@ public class UserStateSettingAdapter extends RecyclerView.Adapter<UserStateSetti
     }
     interface MyGoodsStateItemListener{
         //点击 我的发布， 我的卖出等 项
-        void onClick();
+        void onClick(int pos);
     }
 }

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="UserMsgFRV">
+        <item>我的发布</item>
+        <item>我的卖出</item>
+        <item>我的收藏</item>
+        <item>我买到的</item>
+    </string-array>
+
+</resources>

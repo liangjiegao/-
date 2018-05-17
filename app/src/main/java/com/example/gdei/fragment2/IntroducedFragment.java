@@ -16,6 +16,7 @@ import android.widget.LinearLayout;
 import com.example.gdei.MyContext;
 import com.example.gdei.R;
 import com.example.gdei.fragment1.MarketFragment;
+import com.example.gdei.fragment4.UserMsgFragment;
 import com.example.gdei.util.GetPostUtil;
 
 import org.json.JSONArray;
@@ -116,6 +117,7 @@ public class IntroducedFragment extends Fragment {
                     if (result.toString().equals("1")) {
                         Snackbar.make(f2_ll_main, "物品发布成功！", Snackbar.LENGTH_LONG).show();
                         MarketFragment.isUpDate = true;
+                        UserMsgFragment.isUpdate = true;
                         clearText();
                     }else {
                         Snackbar.make(f2_ll_main, "物品发布失败！", Snackbar.LENGTH_LONG).show();

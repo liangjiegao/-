@@ -48,6 +48,7 @@ public class MarketFragment extends Fragment{
 
     private boolean isFirst = true;
     public static boolean isUpDate = false;
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -174,4 +175,14 @@ public class MarketFragment extends Fragment{
             }
         }
     };
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        if (isUpDate){
+            getSaleMsg();
+            isUpDate = false;
+        }
+
+    }
 }

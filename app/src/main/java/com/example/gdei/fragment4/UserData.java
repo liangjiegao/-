@@ -22,12 +22,13 @@ public class UserData extends Activity implements View.OnClickListener{
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_data);
         initView();
         LinearLayoutManager manager = new LinearLayoutManager(this);
         manager.setOrientation(LinearLayoutManager.VERTICAL);
         data_item.setLayoutManager(manager);
-        UserDataAdapter adapter = new UserDataAdapter(this,null);
+        UserDataAdapter adapter = new UserDataAdapter(this,null, null);
         data_item.setAdapter(adapter);
 
     }

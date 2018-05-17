@@ -4,6 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/body_color"
+    android:id="@+id/goods_msg_body"
     >
     <RelativeLayout
         android:id="@+id/goods_msg_head"
