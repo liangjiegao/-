@@ -29,7 +29,10 @@
         <activity android:name=".fragment4.UserMsgActivity">
 
         </activity>
-        <activity android:name=".fragment4.UserData">
+        <activity android:name=".fragment4.UserDataActivity">
+
+        </activity>
+        <activity android:name=".fragment4.UserGoodsListActivity">
 
         </activity>
     </application>

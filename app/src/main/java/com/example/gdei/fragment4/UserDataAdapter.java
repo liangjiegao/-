@@ -19,9 +19,10 @@ public class UserDataAdapter extends RecyclerView.Adapter<UserDataAdapter.UDAHol
 
     String[] itemNames = {"头像","背景图","性别","生日","常住","简介","收货地址"};
     private Context context;
-
-    public UserDataAdapter(Context context, List list){
+    DataItemListener listener;
+    public UserDataAdapter(Context context, List list, DataItemListener listener){
         this.context = context;
+        this.listener = listener;
     }
 
     @Override
@@ -35,7 +36,12 @@ public class UserDataAdapter extends RecyclerView.Adapter<UserDataAdapter.UDAHol
     public void onBindViewHolder(UDAHolder holder, int position) {
 
         holder.itemName.setText(itemNames[position]);
-
+        holder.itemName.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                listener.onClick();
+            }
+        });
     }
 
     @Override
@@ -50,6 +56,10 @@ public class UserDataAdapter extends RecyclerView.Adapter<UserDataAdapter.UDAHol
             super(itemView);
             itemName = itemView.findViewById(R.id.item_name);
         }
+    }
+    interface DataItemListener{
+        //点击监听
+        void onClick();
 
     }
 }

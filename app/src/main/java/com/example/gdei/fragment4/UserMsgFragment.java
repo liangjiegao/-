@@ -38,11 +38,16 @@ public class UserMsgFragment extends Fragment implements View.OnClickListener{
         rootView = inflater.inflate(R.layout.fragment4_usermsg, container, false);
         initView();
         //f4_userState.addItemDecoration(new DividerItemDecoration(this.getActivity(), DividerItemDecoration.VERTICAL_LIST));
-        adapter = new UserStateSettingAdapter(this.getContext(), stateNumList);
+        adapter = new UserStateSettingAdapter(this.getContext(), stateNumList, new UserStateSettingAdapter.MyGoodsStateItemListener() {
+            @Override
+            public void onClick() {
+                Intent showItem = new Intent(getActivity(), UserGoodsListActivity.class);
+                startActivity(showItem);
+            }
+        });
         LinearLayoutManager manager = new LinearLayoutManager(this.getContext());
         manager.setOrientation(LinearLayoutManager.VERTICAL);
         f4_userState.setLayoutManager(manager);
-
         f4_userState.setAdapter(adapter);
         return rootView ;
     }

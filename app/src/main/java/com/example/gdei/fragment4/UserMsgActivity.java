@@ -120,7 +120,7 @@ public class UserMsgActivity extends Activity implements View.OnClickListener{
                 finish();
                 break;
             case R.id.user_msg_edit_intr:
-                Intent intent = new Intent(UserMsgActivity.this, UserData.class);
+                Intent intent = new Intent(UserMsgActivity.this, UserDataActivity.class);
                 startActivity(intent);
                 break;
         }

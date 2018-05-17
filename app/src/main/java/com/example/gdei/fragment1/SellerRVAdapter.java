@@ -24,6 +24,7 @@ public class SellerRVAdapter extends RecyclerView.Adapter<SellerRVAdapter.MyHold
     private Context myContext;
 
     private ItemListener itemListener;
+
     public SellerRVAdapter(Context myContext, List<Map<String, String>> sellerList, ItemListener itemListener){
         this.sellerList = sellerList;
         this.myContext = myContext;

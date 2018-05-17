@@ -2,6 +2,7 @@ package com.example.gdei.fragment4;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -27,9 +28,11 @@ public class UserStateSettingAdapter extends RecyclerView.Adapter<UserStateSetti
 
     private Context context;
     private List<Integer> list;
-    public UserStateSettingAdapter(Context context, List<Integer> list){
+    private MyGoodsStateItemListener stateItemListener;
+    public UserStateSettingAdapter(Context context, List<Integer> list, MyGoodsStateItemListener listener){
         this.list = list;
         this.context = context;
+        this.stateItemListener = listener;
     }
 
 
@@ -45,7 +48,12 @@ public class UserStateSettingAdapter extends RecyclerView.Adapter<UserStateSetti
         holder.state_icon.setBackgroundResource(stateIcons[position]);
         holder.state_name.setText(stateTexts[position]);
         holder.state_num.setText(list.get(position)+"");
-
+        holder.state_body.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                stateItemListener.onClick();
+            }
+        });
     }
 
     @Override
@@ -56,11 +64,17 @@ public class UserStateSettingAdapter extends RecyclerView.Adapter<UserStateSetti
     class StateHolder extends RecyclerView.ViewHolder{
         ImageView state_icon;
         TextView state_name, state_num;
+        CardView state_body;
         public StateHolder(View itemView) {
             super(itemView);
+            state_body = itemView.findViewById(R.id.state_body);
             state_icon = itemView.findViewById(R.id.state_icon);
             state_name = itemView.findViewById(R.id.state_name);
             state_num = itemView.findViewById(R.id.state_num);
         }
+    }
+    interface MyGoodsStateItemListener{
+        //点击 我的发布， 我的卖出等 项
+        void onClick();
     }
 }
