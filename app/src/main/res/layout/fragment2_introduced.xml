@@ -76,10 +76,11 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 >
-                <RelativeLayout
+                <FrameLayout
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_marginStart="20dp"
+                    android:background="#64d4cccc"
                     >
                     <ImageButton
                         android:id="@+id/f2_ib_takeP"
@@ -87,6 +88,7 @@
                         android:layout_height="60dp"
                         android:background="@drawable/img"
                         android:layout_centerInParent="true"
+                        android:layout_margin="5dp"
                         />
                     <ImageButton
                         android:id="@+id/f2_ib_delete_photo"
@@ -94,16 +96,18 @@
                         android:layout_height="wrap_content"
                         android:background="@drawable/delete_photo"
                         android:src="@drawable/cross"
+                        android:visibility="invisible"
                         />
-                </RelativeLayout>
+                    <ImageView
+                        android:id="@+id/f2_add_img"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@mipmap/addphoto"
+                        android:scaleType="fitXY"
+                        android:layout_margin="20dp"
+                        />
+                </FrameLayout>
 
-                <ImageButton
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:layout_marginStart="15dp"
-                    android:background="@drawable/img"
-                    android:layout_marginTop="5dp"
-                    />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
